@@ -1,0 +1,1 @@
+<?php if (!defined('VOWELSFORMDRAGDROP_VERSION')) exit; ?></div></div></div>

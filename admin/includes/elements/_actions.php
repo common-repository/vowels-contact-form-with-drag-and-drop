@@ -1,0 +1,6 @@
+<?php if (!defined('VOWELSFORMDRAGDROP_VERSION')) exit; ?><div class="ifb-element-actions">
+    <a class="ifb-close-link" title="<?php esc_attr_e('Hide settings - you will not lose unsaved data!','vowels-contact-form-with-drag-and-drop'); ?>" href="#" onclick="vowelsforminc.hideSettings(<?php echo $id; ?>); return false;"><span></span><?php esc_html_e('Hide','vowels-contact-form-with-drag-and-drop'); ?></a>
+    <a class="ifb-settings-link" title="<?php esc_attr_e('Settings','vowels-contact-form-with-drag-and-drop'); ?>" href="#" onclick="vowelsforminc.showSettings(<?php echo $id; ?>); return false;"><span></span><?php esc_html_e('Settings','vowels-contact-form-with-drag-and-drop'); ?></a>
+    <a class="ifb-delete-link" title="<?php esc_attr_e('Delete this element','vowels-contact-form-with-drag-and-drop'); ?>" href="#" onclick="vowelsforminc.deleteElement(<?php echo $id; ?>); return false;"><?php esc_html_e('Delete','vowels-contact-form-with-drag-and-drop'); ?></a>
+    <a class="ifb-move-link" title="<?php esc_attr_e('Click and drag to move this element','vowels-contact-form-with-drag-and-drop'); ?>" href="#" onclick="return false;"><span></span><?php esc_html_e('Move','vowels-contact-form-with-drag-and-drop'); ?></a>
+</div>

@@ -1,0 +1,1000 @@
+/* THIS IS THE DEFAULT STYLING AND POSITIONING CSS FOR VOWELS. TO CHANGE THE DESIGN PLEASE USE AN VOWELS THEME CSS. THANKS :)
+ * Author: vowelsform
+ * Author URI: http://www.vowelsform.com/
+ */
+
+/*******************************************************************************************************************************************
+IMPORTANT: If you update the vowelsforminc plugin this file will also be updated. Thus if you make changes in here you will lose them!
+
+We strongly recommend you make your own theme by duplicating one of our theme folders and renaming it. This way you will not lose anything.
+********************************************************************************************************************************************/
+
+/* Clearfix code */
+.vowels-clearfix:before,
+.vowels-clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* added this line on 25.11.2018 to auto set proper width */
+.form-group {
+    display: inline-block;
+}
+/* added this line on 25.11.2018 to auto set proper width ends here */
+
+/* Clearfix code */
+.vowels-clearfix:after {clear: both;}
+.vowels-clearfix {zoom: 1;} /* IE < 8 */
+
+/* For screen readers */
+.vowels-screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	min-height: 0 !important; /* Reset Vowelsform style */
+}
+
+/* Cross browser fixes */
+.vowels-inner input[type="checkbox"], input[type="radio"] {
+    vertical-align: middle;
+}
+.vowels-inner label {
+    vertical-align: middle;
+	display: inline-block;
+	min-height: 20px;
+}
+.vowels-inner button::-moz-focus-inner {border: 0;}
+.vowels-inner :focus, .vowels-inner a:focus{outline: 0}/* removes gray dotted outline */
+.vowels-inner input.middle:focus, .vowels-inner select.middle:focus, .vowels-inner textarea.middle:focus {outline-width: 0;}
+.vowels-inner input:focus, .vowels-inner select:focus, .vowels-inner textarea:focus {outline: none;}
+
+.vowels-inner textarea {overflow: auto; vertical-align: top;} /* IE7 fix */
+.vowels-inner button, .vowels-innerinput{ /* IE7 extra spacing fix */
+    width: auto;
+    overflow: visible
+}
+.vowels-inner button{border: 1px outset #ccc} /* optional - IE7 fix */
+/*Main Wrappers*/
+
+.vowels-inner .vowels-elements {
+	margin: 0;
+	padding: 0;
+}
+.vowels-element-spacer {
+	/* padding-bottom: 20px; */
+	padding-bottom: 0px;
+}
+/*Hidden*/
+.vowels-hidden {
+	display: none
+}
+/*Required*/
+.vowels-element-wrap label span.vowels-required {
+   /*  color: #cc0101; */
+    color:ff0000;	 
+    font-weight: 700;
+	margin: 0 0 0 5px;
+}
+
+/*Default input, selects and textareas*/
+
+/* .vowels-elements .vowels-element-wrap-text input, */
+/* .vowels-elements .vowels-element-wrap-captcha input, */
+/* .vowels-elements .vowels-element-wrap-password input, */
+/* .vowels-elements .vowels-element-wrap select, */
+/* .vowels-elements .vowels-element-wrap textarea { */
+	/* margin: 0; */
+	/* margin-bottom: 3px; */
+	/* color: #999; */
+	/* border: solid 1px #CCC; */
+	/* padding: 2px; */
+	/* min-width: 10px; */
+	/* max-width: 100%; */
+/* } */
+/* .vowels-elements .vowels-element-wrap-text input:hover, */
+/* .vowels-elements .vowels-element-wrap-captcha input:hover, */
+/* .vowels-elements .vowels-element-wrap-password input:hover, */
+/* .vowels-elements .vowels-element-wrap select:hover, */
+/* .vowels-elements .vowels-element-wrap textarea:hover, */
+/* .vowels-elements .vowels-element-wrap-text input:active, */
+/* .vowels-elements .vowels-element-wrap-captcha input:active, */
+/* .vowels-elements .vowels-element-wrap-password input:active, */
+/* .vowels-elements .vowels-element-wrap select:active, */
+/* .vowels-elements .vowels-element-wrap textarea:active, */
+/* .vowels-elements .vowels-element-wrap-text input:focus, */
+/* .vowels-elements .vowels-element-wrap-captcha input:focus, */
+/* .vowels-elements .vowels-element-wrap-password input:focus, */
+/* .vowels-elements .vowels-element-wrap select:focus, */
+/* .vowels-elements .vowels-element-wrap textarea:focus */
+/* {color: #000;} */
+
+/* Stop line-height affecting the height of single line inputs */
+/* .vowels-elements .vowels-element-wrap-text input, */
+/* .vowels-elements .vowels-element-wrap-captcha input, */
+/* .vowels-elements .vowels-element-wrap-password input { */
+	/* line-height: 2.6em; */
+/* } */
+/* Textarea can have some decent line-height */
+/* .vowels-elements .vowels-element-wrap-textarea textarea { */
+	/* line-height: 1.4; */
+/* } */
+
+/* Default Label*/
+/* .vowels-element-wrap > label { */
+    /* font-weight: bold; */
+	/* padding: 0 0 4px 0; */
+	/* display: inline-block; */
+/* } */
+
+/* Invisible reCAPTCHA */
+.vowels-recaptcha-size-invisible .vowels-element-spacer > label {
+	display: none;
+}
+.vowels-recaptcha-size-invisible.vowels-recaptcha-badge-bottomleft .vowels-element-spacer,
+.vowels-recaptcha-size-invisible.vowels-recaptcha-badge-bottomright .vowels-element-spacer {
+	padding-bottom: 0;
+}
+.vowels-recaptcha-size-invisible.vowels-recaptcha-badge-inline .vowels-element-spacer {
+	margin-top: 8px;
+}
+.vowels-recaptcha-size-invisible.vowels-recaptcha-badge-inline .vowels-input-wrap {
+	margin-bottom: 3px;
+}
+
+/*File uploads*/
+.vowels2-upload-progress-wrap {
+    display: none;
+	background: #eee;
+	border: 1px solid #ddd;
+	padding: 5px;
+	margin: 0 5px 5px 0;
+	line-height: 14px;
+}
+.vowels-upload-progress-bar-wrap {
+	background: #eee;
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+.vowels-upload-progress-bar {
+    width: 0;
+    height: 10px;
+    background: #7ec100;
+}
+.vowels-upload-info {
+	padding-top: 3px;
+}
+.vowels-upload-info > div {
+	float: left;
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 11px;
+	line-height: 15px;
+}
+.vowels-upload-error {
+    display: none;
+    padding: 3px;
+    background: #F3CAC7;
+}
+.vowels-upload-info > div:first-child {
+	padding-left: 2px;
+}
+.vowels-file-queue {
+	display: none;
+	padding-bottom: 5px;
+}
+.vowels-upload-queue-file {
+	float: left;
+	display: inline-block;
+	background: #eee;
+	border: 1px solid #ddd;
+	padding: 5px;
+	margin: 0 5px 5px 0;
+	position: relative;
+	overflow: hidden;
+}
+.vowels-upload-queue-filename {
+	float: left;
+	max-width: 200px;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-right: 20px;
+}
+.vowels-upload-queue-remove {
+	font-size: 10px;
+	font-weight: bold;
+	color: #000;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin: -8px 4px 0 0;
+	height: 17px;
+	width: 17px;
+	line-height: 17px;
+	text-align: center;
+	display: block;
+}
+.vowels-upload-queue-success {
+	font-size: 10px;
+	font-weight: bold;
+	color: #000;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin: -8px 4px 0 0;
+	height: 17px;
+	width: 17px;
+	line-height: 17px;
+	text-indent: -99999px;
+	background: url(../images/file-upload-tick.png) no-repeat center center;
+	display: block;
+}
+/*File browse button*/
+.vowels-swfupload {
+	position: relative;
+	margin-bottom: 8px;
+	display: none;
+}
+/*add styles to your button*/
+.vowels-swfupload-browse {
+    background: #EEE;
+	border: solid 1px #DDD;
+	text-align: center;
+	min-width: 80px;
+	min-height: 20px;
+	line-height: 20px;
+	padding: 3px 10px;
+	display: inline-block;
+	cursor: pointer;
+	float: left;
+	position: relative;
+	color: #000;
+	overflow: hidden;
+}
+.vowels-swfupload-browse:hover {
+	background: #DDD;
+}
+.vowels-swfupload-browse .vowels-upload-enhanced {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* IE 10 fix */
+.vowels-swfupload-browse ::-ms-browse {
+    width: 100%;
+	font-size: 1000px;
+}
+.vowels-swfupload-browse ::-ms-value {
+    display: none;
+    font-size: 0;
+}
+/* Chrome fix - hide the button for consistent cursor: pointer; */
+.vowels-swfupload-browse ::-webkit-file-upload-button {
+	visibility: hidden;
+}
+/*add styles to add another button*/
+.vowels-add-another-upload {
+    margin-top: 5px;
+}
+.vowels-add-another-upload span.vowels-add-another-upload-button {
+    background: #EEE;
+	border: solid 1px #DDD;
+	text-align: center;
+	cursor: pointer;
+	padding: 4px 10px;
+	margin: 3px 0;
+	float: left;
+	line-height: 1;
+}
+.vowels-add-another-upload span.vowels-add-another-upload-button:hover {
+	background: #ddd;
+}
+
+/*Element Description*/
+.vowels-element-wrap p.vowels-description,
+#content .vowels-element-wrap p.vowels-description {
+    margin: 0;
+    font-size: 11px;
+}
+.vowels-element-wrap p.vowels-description {
+	padding-bottom: 0;
+	font-size: 11px;
+	font-style: italic;
+}
+
+/*Headings*/
+h3.vowels-title {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0;
+	padding-bottom: 8px;
+}
+
+/*Form Description*/
+p.vowels-description {
+	font-size: 12px;
+	color: #666;
+	margin: 0;
+	padding-bottom: 20px;
+}
+
+/*Check box and radio buttons*/
+.vowels-input-checkbox-ul, .vowels-input-radio-ul {
+	margin: 0;
+	padding: 0;
+}
+.vowels-input-checkbox-ul .vowels-input-checkbox-li,
+.vowels-input-radio-ul .vowels-input-radio-li {
+	margin: 0;
+	padding: 0;
+	height: 25px;
+	height: auto;
+	min-height: 25px;
+}
+.vowels-input-checkbox-ul .vowels-input-checkbox-li label,
+.vowels-input-radio-ul .vowels-input-radio-li label {
+	position: relative;
+}
+.vowels-elements .vowels-element-wrap .vowels-input-checkbox-ul .vowels-input-checkbox-li input,
+.vowels-elements .vowels-element-wrap .vowels-input-radio-ul .vowels-input-radio-li input {
+	border: none;
+}
+.vowels-input-checkbox-li label,
+.vowels-input-radio-li label { line-height: 23px; }
+
+/*Radio and checkboxes inline option*/
+.vowels-options-inline > .vowels-input-checkbox-li,
+.vowels-options-inline > .vowels-input-radio-li {
+	display: inline;
+	padding: 0 15px 5px 0;
+	float: left;
+}
+.vowels-options-inline .vowels-input-checkbox-li label,
+.vowels-options-inline .vowels-input-radio-li label {white-space: nowrap;}
+
+/*Captcha*/
+.vowels-captcha-image-wrap {
+    position: relative;
+}
+.ifb-captcha-image-inner {
+	position: relative;
+	float: left;
+	background: #fff url(../images/captcha-refresh-icon.png) no-repeat center center;
+    cursor: pointer;
+}
+.ifb-captcha-image-inner img {
+	max-width: 100%;
+	display: block;
+}
+
+/*Groups*/
+.vowels-group-title-description-wrap {
+	margin-bottom: 10px;
+}
+.vowels-group-title {
+	font-size: 17px;
+	font-weight: bold;
+	margin: 0;
+	padding-bottom: 5px;
+}
+p.vowels-group-description {
+	font-size: 13px;
+	color: #666;
+	margin: 0;
+	padding-bottom: 0;
+}
+.vowels-group-style-bordered > .vowels-group-elements {
+	border: solid 1px #CCC;
+	padding: 10px 10px 0;
+}
+.vowels-group-row {
+	padding: 0;
+}
+.vowels-group-row > .vowels-element-wrap,
+.vowels-group-row > .vowels-group-wrap {
+	display: inline-block;
+	float: left;
+	min-height: 1px;
+	padding: 0;
+}
+.vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-1cols > .vowels-element-wrap,
+.vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-1cols > .vowels-group-wrap {
+	width: 100%;
+}
+.vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-2cols > .vowels-element-wrap,
+.vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-2cols > .vowels-group-wrap {
+	width: 49.9%;
+}
+.vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-3cols  > .vowels-element-wrap,
+.vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-3cols > .vowels-group-wrap {
+	width: 33.3%;
+}
+.vowels-group-alignment-proportional .vowels-group-row-4cols > .vowels-element-wrap,
+.vowels-group-alignment-proportional .vowels-group-row-4cols > .vowels-group-wrap {
+	width: 25%;
+}
+.vowels-group-alignment-proportional .vowels-group-row-5cols > .vowels-element-wrap,
+.vowels-group-alignment-proportional .vowels-group-row-5cols > .vowels-group-wrap {
+	width: 20%;
+}
+.vowels-group-alignment-left > .vowels-group-elements > .vowels-group-row > .vowels-element-wrap,
+.vowels-group-alignment-left > .vowels-group-elements > .vowels-group-row > .vowels-group-wrap {
+	float: left;
+	width: auto;
+}
+.vowels-group-alignment-left > .vowels-group-elements > .vowels-group-row > .vowels-group-alignment-proportional {
+	width: 100%;
+	clear: both;
+}
+/*Default Spacing in groups*/
+.vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row > .vowels-element-wrap .vowels-element-spacer {
+	padding: 0 10px 10px 0;
+}
+.vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row > .vowels-element-wrap.last-child .vowels-element-spacer,
+.vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row.vowels-group-row-1cols > .vowels-element-wrap .vowels-element-spacer,
+.vowels-group-alignment-left > .vowels-group-elements > .vowels-group-row > .vowels-element-wrap.last-child .vowels-element-spacer,
+.vowels-group-alignment-left > .vowels-group-elements > .vowels-group-row.vowels-group-row-1cols > .vowels-element-wrap .vowels-element-spacer {
+	padding: 0 0 10px 0;
+}
+/*Left Spacing in groups*/
+.vowels-group-alignment-left > .vowels-group-elements > .vowels-group-row > .vowels-element-wrap .vowels-element-spacer {
+	padding: 0 10px 10px 0;
+}
+.vowels-group-alignment-proportional > .vowels-group-elements .vowels-group-wrap > .vowels-group-elements {
+	margin-right: 10px;
+}
+.vowels-group-alignment-proportional > .vowels-group-elements .vowels-group-wrap.last-child > .vowels-group-elements,
+.vowels-group-alignment-proportional > .vowels-group-elements .vowels-group-row-1cols > .vowels-group-wrap > .vowels-group-elements {
+	margin-right: 0;
+}
+.vowels-group-alignment-proportional > .vowels-group-elements .vowels-group-wrap.last-child {
+	margin-right: -10px;
+	min-width: 1px;
+}
+
+.vowels-group-style-bordered.vowels-group-wrap {
+	margin-bottom: 15px;
+}
+.vowels-group-wrap > .vowels-group-elements .vowels-group-row .vowels-group-style-bordered.vowels-group-wrap {
+	margin-bottom: 0;
+}
+.vowels-group-style-plain.vowels-group-wrap {
+	margin: 0;
+}
+.vowels-group-wrap .vowels-group-row > .vowels-group-style-plain.vowels-group-wrap {
+	margin: 0;
+}
+.vowels-group-wrap .vowels-group-row > .vowels-group-style-bordered.vowels-group-wrap {
+	padding: 0 0 10px 0;
+	float: left;
+}
+.vowels-group-alignment-left > .vowels-group-elements > .vowels-group-row > .vowels-group-style-bordered.vowels-group-wrap {
+	margin-right: 10px;
+}
+.vowels-group-alignment-left > .vowels-group-elements > .vowels-group-row > .vowels-group-style-bordered.vowels-group-wrap.last-child {
+	margin-right: 0;
+}
+.vowels-group-wrap .vowels-group-row.vowels-group-row-1cols > .vowels-group-style-bordered.vowels-group-wrap {
+	padding: 0 0 10px 0;
+	float: none;
+	clear: both;
+}
+
+/*LABEL / INPUT POSITION OPTIONS*/
+
+/*label above*/
+.vowels-labels-above > .vowels-element-spacer > label {
+	position: relative;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+/*label left*/
+.vowels-labels-left > .vowels-element-spacer > label {
+    width: 150px;
+	position: relative;
+	float: left;
+	padding-bottom: 10px;
+}
+
+/*label inside (text, textarea, email, password)*/
+.vowels-element-wrap-text.vowels-labels-inside > .vowels-element-spacer > label,
+.vowels-element-wrap-textarea.vowels-labels-inside > .vowels-element-spacer > label,
+.vowels-element-wrap-password.vowels-labels-inside > .vowels-element-spacer > label,
+.vowels-element-wrap-captcha.vowels-labels-inside > .vowels-element-spacer > label {
+    padding: 0;
+    line-height: 16px;
+    margin-left: 5px;
+    /* margin-top: 16px; */
+    color: #999;
+	position: absolute;
+	z-index: 1;
+}
+
+/*input above*/
+.vowels-labels-above.vowels-element-wrap .vowels-input-outer-wrap {
+	padding-top: 5px;
+}
+/*input left*/
+.vowels-labels-left.vowels-element-wrap .vowels-input-outer-wrap,
+.vowels-labels-left.vowels-element-wrap .vowels-input-wrap,
+.vowels-labels-left.vowels-element-wrap .vowels-captcha-image-wrap {
+	margin-left: 150px;
+	padding-left: 10px;
+}
+.vowels-labels-left.vowels-element-wrap .vowels-input-outer-wrap > .vowels-input-wrap {
+	margin-left: 0 !important;
+	padding-left: 0;
+}
+/*input inside*/
+.vowels-element-wrap.vowels-labels-inside .vowels-element-spacer {
+	position: relative;
+}
+/*input inside (text, textarea, email, password)*/
+.vowels-input-wrap-text.vowels-labels-inside > .vowels-element-spacer > input,
+.vowels-input-wrap-textarea.vowels-labels-inside > .vowels-element-spacer > input,
+.vowels-input-wrap-email.vowels-labels-inside > .vowels-element-spacer > input,
+.vowels-input-wrap-password.vowels-labels-inside > .vowels-element-spacer > input,
+.vowels-input-wrap-captcha.vowels-labels-inside > .vowels-element-spacer > input {
+    margin-top: 0;
+}
+
+/*Submit button*/
+.vowels-submit-wrap {margin: 10px 0}
+.vowels-submit-input-wrap {
+	float: left;
+}
+.vowels-submit-wrap button {
+	border: none;
+	background: none;
+	text-align: center;
+	width: auto;
+	overflow: visible;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+	height: auto;
+	line-height: normal;
+	cursor: pointer;
+	margin-right: 5px;
+}
+.vowels-submit-wrap button:active {
+	background: none;
+	border: none;
+	padding: 0;
+}
+.vowels-submit-wrap button span, .vowels-submit-wrap button em {
+	display: block;
+	line-height: 45px;
+	margin: 0;
+	color: #000;
+	cursor: pointer;
+}
+.vowels-submit-wrap button span {
+	padding-left: 20px;
+	background: #EEE;
+	border: solid 1px #DDD;
+}
+.vowels-submit-wrap button em {
+	font-style: normal;
+	padding-right: 20px;
+	background: #EEE;
+}
+.vowels-submit-wrap button:hover em {
+	background: #ddd;
+}
+.vowels-submit-wrap button:active em {
+	background: #ccc;
+}
+.vowels-submit-wrap button:hover span {
+	background: #ddd;
+}
+.vowels-submit-wrap button:active span {
+	background: #ccc;
+}
+
+/*Loading the submit*/
+.vowels-loading-wrap {
+    display: none;
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	padding-top: 5px;
+}
+.vowels-loading-wrap .vowels-loading {
+	font-style: italic;
+	text-indent: -9999px;
+	display: block;
+	min-width: 30px;
+	background: transparent url(../images/default-loading.gif) no-repeat center center;
+}
+
+/*Errors*/
+.vowels-errors {
+    display: none;
+}
+.vowels-errors-list {
+	margin: 0;
+	padding: 3px 0 6px 0;
+}
+.vowels-errors-list > .vowels-error {
+	padding: 3px 10px 3px 25px;
+	margin: 0;
+	line-height: 16px;
+	background: #F3CAC7 url(../images/error.png) no-repeat 3px center;
+	color: #000;
+	font-size: 12px;
+	font-weight: normal;
+	display: inline-block;
+	border: 1px solid #fa8b83;
+	float: left;
+}
+.vowels-labels-left > .vowels-element-spacer > .vowels-errors-wrap {margin-left: 150px;}
+.vowels-labels-left > .vowels-element-spacer > .vowels-errors-wrap .vowels-errors-list > .vowels-error {margin-left: 10px !important;}
+.vowels-labels-above > .vowels-element-spacer > .vowels-errors-wrap .vowels-errors-list .vowels-error,
+.vowels-labels-inside > .vowels-element-spacer > .vowels-errors-wrap .vowels-errors-list .vowels-error
+{margin-left: 0 !important;}
+/*File upload errors*/
+.vowels-queue-errors {
+    display: none;
+}
+.vowels-queue-errors {
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+.vowels-queue-errors-list {
+	margin-bottom: 4px;
+}
+.vowels-queue-errors-list > .vowels-queue-error {
+	padding: 3px 10px 3px 25px;
+	margin: 0;
+	line-height: 16px;
+	background: #F3CAC7 url(../images/error.png) no-repeat 3px center;
+	color: #000;
+	font-size: 12px;
+	font-weight: normal;
+	display: inline-block;
+	border: 1px solid #fa8b83;
+	float: left;
+}
+/*Success message*/
+.vowels-success-message {
+/*    background: #cef4a9 url(../images/success.png) no-repeat 14px center;
+ */   
+    padding: 8px 20px 8px 45px;
+	line-height: 18px;
+	margin: 10px 0;
+	border: 2px solid #80bb48;
+	font-weight: normal;
+	color: #000;
+}
+/*vowelsforminc referal link*/
+.vowels-referral-link a {
+	text-decoration: none;
+	color: #0F83CA;
+}
+.vowels-referral-link a:hover {
+	color: #292929;
+}
+/*Datepicker*/
+.vowels-input-wrap-date-select-wrap {
+	float: left;
+}
+.vowels-datepicker-icon {
+    display: none; /* Set to inline-block in JS */
+    height: 24px;
+    width: 24px;
+    background: url(../images/date-picker.png) no-repeat left center;
+    cursor: pointer;
+	float: left;
+	margin: 2px 0 0 2px;
+}
+/*This can't be namespaced*/
+.ui-datepicker {
+    z-index: 25000 !important;
+}
+#ui-datepicker-div {
+	font-size: 14px;
+}
+#ui-datepicker-div table {
+	line-height: 1.2;
+}
+/*Fixes for consistent browsing*/
+.vowels-input-wrap .vowels-element-file-inner input[type="file"] {text-shadow: none !important;}
+*:first-child+html .vowels-input-wrap select {background: transparent !important; color:#000 !important;}
+*:first-child+html .vowels-input-wrap select option {background: #fff !important; color:#000 !important;}
+.vowels-input-radio-li input[type="radio"] {background: transparent !important; border: none transparent !important;}
+.vowels-input-checkbox-li input[type="checkbox"] {background: transparent !important; border: none transparent !important;}
+
+/*Hide FOUC*/
+.vowels-js .vowels-input-wrap-file {
+    display: none;
+}
+/*Tooltip icons*/
+.vowels-tooltip-icon {
+    width: 15px;
+    height: 15px;
+    background: url(../images/help-icon.png) no-repeat right bottom;
+	display: inline-block;
+	cursor: pointer;
+	margin: 0 0 0 5px;
+}
+.vowels-element-wrap-text.vowels-labels-inside > .vowels-element-spacer > label .vowels-tooltip-icon,
+.vowels-element-wrap-textarea.vowels-labels-inside > .vowels-element-spacer > label .vowels-tooltip-icon,
+.vowels-element-wrap-password.vowels-labels-inside > .vowels-element-spacer > label .vowels-tooltip-icon,
+.vowels-element-wrap-captcha.vowels-labels-inside > .vowels-element-spacer > label .vowels-tooltip-icon {
+	position: absolute;
+	right: -20px;
+	top: 0;
+}
+.vowels-tooltip-icon-content {
+    display: none;
+}
+/*Conditional logic*/
+.vowels-js .vowels-has-logic {
+    visibility: hidden;
+}
+/*Fancybox*/
+#fancybox-content .vowels-inner {
+    padding: 15px;
+}
+#fancybox-content .vowels-edit-form-wrap {
+	display: none;
+}
+/*User defined widths don't work in IE7 - reverts back to auto*/
+*:first-child+html .selector > span {width: auto !important;}
+*:first-child+html .selector > select {width: auto !important;}
+/* "Fitvids" jQuery plugin fix */
+.vowels-swfupload-browse .fluid-width-video-wrapper {
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+/* Uniform fixes */
+.vowels div.uploader span.filename {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.vowels-uniform-theme-default .vowels div.selector.fixedWidth,
+.vowels-uniform-theme-default .vowels div.selector.fixedWidth span,
+.vowels-uniform-theme-aristo .vowels div.selector.fixedWidth,
+.vowels-uniform-theme-aristo .vowels div.selector.fixedWidth span,
+.vowels-uniform-theme-agent .vowels div.selector.fixedWidth,
+.vowels-uniform-theme-agent .vowels div.selector.fixedWidth span {
+    width: auto;
+}
+.vowels-uniform-theme-default .vowels div.selector,
+.vowels-uniform-theme-aristo .vowels div.selector,
+.vowels-uniform-theme-agent .vowels div.selector {
+	font-size: 13px;
+	font-weight: normal;
+}
+.vowels-uniform-theme-default .vowels div.selector select,
+.vowels-uniform-theme-aristo .vowels div.selector select,
+.vowels-uniform-theme-agent .vowels div.selector select {
+	font-size: 13px;
+}
+.vowels-uniform-theme-aristo .vowels div.uploader span.action,
+.vowels-uniform-theme-agent .vowels div.uploader span.action {
+    font-size: 11px;
+    font-weight: bold;
+}
+.vowels-uniform-theme-aristo .vowels div.selector span,
+.vowels-uniform-theme-agent .vowels div.selector span {
+    padding-right: 29px;
+}
+.vowels-uniform-theme-aristo .vowels div.checker,
+.vowels-uniform-theme-aristo .vowels div.radio,
+.vowels-uniform-theme-agent .vowels div.checker,
+.vowels-uniform-theme-agent .vowels div.radio {
+    margin-right: 3px;
+}
+.vowels-uniform-theme-agent .vowels div.selector span {
+    text-shadow: none;
+}
+.vowels-uniform-theme-agent .vowels div.selector span {
+    padding-right: 34px;
+}
+.vowels-uniform-theme-default .vowels div.uploader span.action {
+    color: #242424;
+}
+.vowels-uniform-theme-default .vowels div.uploader.hover, .vowels-uniform-theme-default .vowels div.uploader.focus {
+    background-position: 0 -297px;
+}
+.vowels-uniform-theme-agent .vowels div.uploader.hover, .vowels-uniform-theme-agent .vowels div.uploader.focus {
+    background-position: 0 -366px;
+}
+.vowels-uniform-theme-aristo .vowels div.uploader.hover, .vowels-uniform-theme-aristo .vowels div.uploader.focus {
+    background-position: 0 -366px;
+}
+.vowels-uniform-theme-default .vowels div.uploader {
+	background: none;
+	margin-left: -4px;
+}
+.vowels-uniform-theme-default .vowels div.uploader span.filename {
+	background-image: url("../js/uniform/themes/default/images/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 0 -299px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 82px;
+    padding-left: 13px;
+}
+.vowels-uniform-theme-default .vowels div.uploader span.action {
+	background-color: transparent;
+	height: 24px;
+	line-height: 24px;
+	background-position: right -439px;
+	width: 80px;
+	padding-right: 2px;
+}
+.vowels-uniform-theme-default .vowels div.uploader.hover span.action,
+.vowels-uniform-theme-default .vowels div.uploader.focus span.action {
+	background-position: right -439px;
+}
+.vowels-uniform-theme-default .vowels div.uploader.hover.active span.action,
+.vowels-uniform-theme-default .vowels div.uploader.focus.active span.action {
+	background-position: right -439px;
+    line-height: 26px;
+}
+.vowels-uniform-theme-default.vowels-theme-react-default .vowels-elements .vowels-element-wrap .selector select {
+	border-bottom: none;
+}
+.vowels-uniform-theme-agent .vowels div.uploader {
+    background: none;
+    width: 199px;
+    margin-bottom: 0;
+    margin-left: -8px;
+}
+.vowels-uniform-theme-agent .vowels div.uploader span.filename {
+    background-image: url("../js/uniform/themes/agent/images/sprite-agent.png");
+    background-repeat: no-repeat;
+    background-position: 0 -366px;
+    width: 82px;
+    padding-left: 13px;
+}
+.vowels-uniform-theme-agent .vowels div.uploader span.action {
+    background-color: transparent;
+    background-position: right -462px;
+}
+.vowels-uniform-theme-agent .vowels div.uploader.hover span.action,
+.vowels-uniform-theme-agent .vowels div.uploader.focus span.action {
+    background-position: right -462px;
+}
+.vowels-uniform-theme-agent .vowels div.uploader.hover.active span.action,
+.vowels-uniform-theme-agent .vowels div.uploader.focus.active span.action {
+    background-position: right -462px;
+    line-height: 34px;
+}
+.vowels-uniform-theme-aristo .vowels div.uploader {
+    background: none;
+    width: 199px;
+    margin-left: -8px;
+}
+.vowels-uniform-theme-aristo .vowels div.uploader span.filename {
+    background-image: url("../js/uniform/themes/aristo/images/sprite-aristo.png");
+    background-repeat: no-repeat;
+    background-position: 0 -370px;
+    width: 82px;
+    padding-left: 13px;
+}
+.vowels-uniform-theme-aristo .vowels div.uploader span.action {
+	background-color: transparent;
+	background-position: right -462px;
+}
+.vowels-uniform-theme-aristo .vowels div.uploader.hover span.action,
+.vowels-uniform-theme-aristo .vowels div.uploader.focus span.action {
+    background-position: right -462px;
+}
+.vowels-uniform-theme-aristo .vowels div.uploader.hover.active span.action,
+.vowels-uniform-theme-aristo .vowels div.uploader.focus.active span.action {
+    background-position: right -462px;
+    line-height: 34px;
+}
+
+/* Responsive styles */
+
+.vowels-responsive .vowels-elements .vowels-element-wrap-text input,
+.vowels-responsive .vowels-elements .vowels-element-wrap-captcha input,
+.vowels-responsive .vowels-elements .vowels-element-wrap-password input,
+.vowels-responsive .vowels-elements .vowels-element-wrap select,
+.vowels-responsive .vowels-elements .vowels-element-wrap textarea {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   max-width: 100%;
+	
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+	/* Add border-box so padding does not cause overflow */
+    .vowels-outer.vowels-responsive, .vowels-outer.vowels-responsive * {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    max-width: 100%;
+    }
+
+    .vowels-responsive .vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-3cols > .vowels-element-wrap,
+	.vowels-responsive .vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-3cols > .vowels-group-wrap,
+	.vowels-responsive .vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-4cols > .vowels-element-wrap,
+	.vowels-responsive .vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-4cols > .vowels-group-wrap,
+	.vowels-responsive .vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-5cols > .vowels-element-wrap,
+	.vowels-responsive .vowels-group-alignment-proportional > .vowels-group-elements > .vowels-group-row-5cols > .vowels-group-wrap {
+		width: 49.9%;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (max-width: 767px) {
+    /* Groups columns become stacked */
+    .vowels-responsive .vowels-group-row > .vowels-element-wrap,
+    .vowels-responsive .vowels-group-row > .vowels-group-wrap {
+        float: none;
+        width: 100% !important;
+        display: block;
+    }
+
+    /* Elements become full width */
+    .vowels-responsive .vowels-elements .vowels-element-wrap-text input,
+    .vowels-responsive .vowels-elements .vowels-element-wrap-captcha input,
+    .vowels-responsive .vowels-elements .vowels-element-wrap-password input,
+    .vowels-responsive .vowels-elements .vowels-element-wrap select,
+    .vowels-responsive .vowels-elements .vowels-element-wrap textarea {
+        width: 100% !important;
+        min-width: 100px;
+    }
+    .vowels-responsive .vowels-errors > .vowels-error {
+        float: none;
+        display: block;
+    }
+    /* There are no elements to the right so no need for this padding */
+    .vowels-responsive .vowels-element-spacer {
+        padding-right: 0 !important;
+    }
+
+    /* Button is larger for easy clicking on small devices. */
+    .vowels-responsive .vowels-submit-input-wrap {
+        width: 100%;
+    }
+    .vowels-responsive .vowels-submit-wrap button {
+        margin: 0;
+        width: 100%;
+    }
+    .vowels-responsive .vowels-submit-wrap button span,
+    .vowels-responsive .vowels-submit-wrap button em {
+        line-height: 35px;
+    }
+    /* There is not enough room for left labels - so move them above */
+    .vowels-responsive .vowels-labels-left > .vowels-element-spacer > label {
+        float: none;
+        width: auto !important;
+    }
+    .vowels-responsive .vowels-labels-left.vowels-element-wrap .vowels-input-outer-wrap,
+    .vowels-responsive .vowels-labels-left.vowels-element-wrap .vowels-input-wrap,
+    .vowels-responsive .vowels-labels-left.vowels-element-wrap .vowels-captcha-image-wrap {
+        margin-left: 0 !important;
+        padding-left: 0;
+    }
+    /* Make more space for the popup on devices */
+    .vowels-fancybox-wrap-responsive {
+    	right: 0 !important;
+    	left: 0 !important;
+    }
+}
